@@ -94,9 +94,7 @@ class Store:
         salad = 0
         fries = 0
 
-        # Iterate through the Cart objects in the items_in_cart list
         for cart_item in self.items_in_cart:
-            # Check the drinks, mains, and sides attributes of each Cart object
             if cart_item.drinks == "Coke":
                 coke += 1
             elif cart_item.drinks == "Sprite":
@@ -111,8 +109,7 @@ class Store:
 
             if cart_item.sides == "Fries":
                 fries += 1
-        
-        # Output the item counts
+
         print(f"Coke: {coke}x, Sprite: {sprite}x, Pizza: {pizza}x, Burger: {burger}x, Salad: {salad}x, Fries: {fries}x")
 
     
