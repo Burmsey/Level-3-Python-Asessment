@@ -121,11 +121,11 @@ class Store:
             if cart_item.drinks == "Coke - $2":
                 coke += 1
                 self.cart_total += 2
-                coke_text = f"{coke}x Coke "
+                coke_text = f"{coke}x Coke, "
             elif cart_item.drinks == "Sprite - $2":
                 sprite += 1
                 self.cart_total += 2
-                sprite_text = f"{sprite}x Sprite "
+                sprite_text = f"{sprite}x Sprite, "
             if cart_item.mains == "Pizza - $20":
                 pizza += 1
                 self.cart_total += 20
@@ -133,15 +133,15 @@ class Store:
             elif cart_item.mains == "Burger - $22":
                 burger += 1
                 self.cart_total += 22
-                burger_text = f"{burger}x Burger "
+                burger_text = f"{burger}x Burger, "
             elif cart_item.mains == "Salad - $15":
                 salad += 1
                 self.cart_total += 15
-                salad_text = f"{salad}x Salad "
+                salad_text = f"{salad}x Salad, "
             if cart_item.sides == "Fries - $7":
                 fries += 1
                 self.cart_total += 7
-                fries_text = f"{fries}x Fries "
+                fries_text = f"{fries}x Fries, "
 
         self.delivery_frame.grid_forget()
         self.cart_frame.grid(row=0, column=0, padx=100, pady=100, sticky="ew")
@@ -215,8 +215,8 @@ class Store:
             elif self.order_type == "delivery":
                 messagebox.showinfo("Delivery", f"{name}'s order will be delivered to {address} in 30 minutes. Be ready to pay the delivery driver ${self.cart_total} upon arrival.")
 
-        self.checkout_frame.grid_forget()
-        self.home_screen.grid(row=0, column=0, padx=100, pady=100, sticky="ew")
+            self.checkout_frame.grid_forget()
+            self.home_screen.grid(row=0, column=0, padx=100, pady=100, sticky="ew")
 
 
 if __name__ == "__main__":
